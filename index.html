@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <link href="images/ef3007d4d_logo.png" rel="icon" type="image/svg+xml">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="https://nexish.base44.app/manifest.json" rel="manifest">
+  <title>
+   Nexish AI
+  </title>
+  <script crossorigin="" src="js/index-Dn8kzaiO.js" type="module">
+  </script>
+  <link crossorigin="" href="css/index-B6Ke4NJg.css" rel="stylesheet">
+  <script type="module">
+   let lastPath = "";
+function getPageNameFromPath(path) {
+  const segments = path.split("/").filter(Boolean);
+  return segments[0] || null;
+}
+function trackPageView() {
+  const path = window.location.pathname;
+  if (path === lastPath) return;
+  lastPath = path;
+  const pageName = getPageNameFromPath(path) || "home";
+  const appId = "69a4b1970b9faa37f94d1cc4";
+  const serverUrl = "https://base44.app" || "";
+  if (!appId) return;
+  fetch(`${serverUrl}/app-logs/${appId}/log-user-in-app/${pageName}`, {
+    method: "POST",
+  }).catch(() => {});
+}
+const originalPushState = history.pushState.bind(history);
+history.pushState = function (...args) {
+  originalPushState(...args);
+  trackPageView();
+};
+const originalReplaceState = history.replaceState.bind(history);
+history.replaceState = function (...args) {
+  originalReplaceState(...args);
+  trackPageView();
+};
+window.addEventListener("popstate", trackPageView);
+trackPageView();
+  </script>
+  <meta content="Nexish AI" property="og:title">
+  <meta content="Nexish AI is your advanced AI assistant, capable of generating images, videos, websites, code, and much more. Spark creativity, streamline tasks, and explore new possibilities with a suite of powerful AI-driven features." property="og:description">
+  <meta content="images/ef3007d4d_logo_1.png" property="og:image">
+  <meta content="https://nexish.base44.app" property="og:url">
+  <meta content="website" property="og:type">
+  <meta content="Nexish AI" property="og:site_name">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="Nexish AI" name="twitter:title">
+  <meta content="Nexish AI is your advanced AI assistant, capable of generating images, videos, websites, code, and much more. Spark creativity, streamline tasks, and explore new possibilities with a suite of powerful AI-driven features." name="twitter:description">
+  <meta content="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/render/image/public/base44-prod/public/69a4b1970b9faa37f94d1cc4/ef3007d4d_logo.png?width=1200&height=630&resize=contain" name="twitter:image">
+  <meta content="https://nexish.base44.app" name="twitter:url">
+  <meta content="Nexish AI is your advanced AI assistant, capable of generating images, videos, websites, code, and much more. Spark creativity, streamline tasks, and explore new possibilities with a suite of powerful AI-driven features." name="description">
+  <meta content="yes" name="mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="Nexish AI" name="apple-mobile-web-app-title">
+  <meta content="noindex, nofollow" name="robots">
+  <script async="true" data-app-id="69a4b1970b9faa37f94d1cc4" data-platform-url="https://app.base44.com" src="js/badge.js">
+  </script>
+ </head>
+ <body>
+  <div id="root">
+  </div>
+ 
+
+</body></html>
